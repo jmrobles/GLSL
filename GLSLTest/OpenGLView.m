@@ -122,9 +122,12 @@ const GLubyte Indices[] = {
     
     // 5
     _positionSlot = glGetAttribLocation(programHandle, "Position");
-    _colorSlot = glGetAttribLocation(programHandle, "SourceColor");
+   // _colorSlot = glGetAttribLocation(programHandle, "SourceColor");
     glEnableVertexAttribArray(_positionSlot);
-    glEnableVertexAttribArray(_colorSlot);
+  //  glEnableVertexAttribArray(_colorSlot);
+    _center = glGetUniformLocation(programHandle, "center");
+    posX = 50.0;
+    posY = 50.0;
 }
 
 
@@ -183,8 +186,11 @@ const GLubyte Indices[] = {
     // 2
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE,
                           sizeof(Vertex), 0);
-    glVertexAttribPointer(_colorSlot, 4, GL_FLOAT, GL_FALSE,
-                          sizeof(Vertex), (GLvoid*) (sizeof(float) * 3));
+   // glVertexAttribPointer(_colorSlot, 4, GL_FLOAT, GL_FALSE,
+   //                       sizeof(Vertex), (GLvoid*) (sizeof(float) * 3));
+    glUniform2f(	_center,
+                posX,
+                posY);
     
     // 3
     glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]),
@@ -194,7 +200,19 @@ const GLubyte Indices[] = {
     
     
 }
-
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *aTouch = [touches anyObject];
+    CGPoint point = [aTouch locationInView:self];
+    // point.x and point.y have the coordinates of the touch
+    
+    NSLog(@"Pos: %@", NSStringFromCGPoint(point));
+    posX = point.x;
+    posY = 2.0*(self.frame.size.height - point.y);
+    
+    [self render];
+    
+}
 
 
 @end

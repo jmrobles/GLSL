@@ -17,6 +17,8 @@
     GLuint _colorRenderBuffer;
     GLuint _positionSlot;
     GLuint _colorSlot;
+    GLuint _center;
+    GLfloat posX, posY;
 }
 
 @end

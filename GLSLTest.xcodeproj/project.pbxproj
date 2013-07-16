@@ -16,6 +16,12 @@
 		17BB72E717946A1500964700 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BB72E617946A1500964700 /* Default.png */; };
 		17BB72E917946A1500964700 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BB72E817946A1500964700 /* Default@2x.png */; };
 		17BB72EB17946A1500964700 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BB72EA17946A1500964700 /* Default-568h@2x.png */; };
+		17BB72F217946AB100964700 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BB72F117946AB100964700 /* OpenGLES.framework */; };
+		17BB72F417946AC500964700 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BB72F317946AC500964700 /* QuartzCore.framework */; };
+		17BB72F717946BED00964700 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BB72F617946BED00964700 /* OpenGLView.m */; };
+		17BB72F917946F6300964700 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 17BB72F817946F6300964700 /* SimpleVertex.glsl */; };
+		17BB72FB17946F9500964700 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 17BB72FA17946F9500964700 /* SimpleFragment.glsl */; };
+		17BB72FD1794741200964700 /* Fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 17BB72FC1794741200964700 /* Fragment.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,13 @@
 		17BB72E617946A1500964700 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		17BB72E817946A1500964700 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		17BB72EA17946A1500964700 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		17BB72F117946AB100964700 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		17BB72F317946AC500964700 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		17BB72F517946BED00964700 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		17BB72F617946BED00964700 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		17BB72F817946F6300964700 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
+		17BB72FA17946F9500964700 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
+		17BB72FC1794741200964700 /* Fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fragment.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BB72F417946AC500964700 /* QuartzCore.framework in Frameworks */,
+				17BB72F217946AB100964700 /* OpenGLES.framework in Frameworks */,
 				17BB72D517946A1400964700 /* UIKit.framework in Frameworks */,
 				17BB72D717946A1400964700 /* Foundation.framework in Frameworks */,
 				17BB72D917946A1400964700 /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +66,8 @@
 		17BB72C517946A1400964700 = {
 			isa = PBXGroup;
 			children = (
+				17BB72F317946AC500964700 /* QuartzCore.framework */,
+				17BB72F117946AB100964700 /* OpenGLES.framework */,
 				17BB72DA17946A1400964700 /* GLSLTest */,
 				17BB72D317946A1400964700 /* Frameworks */,
 				17BB72D117946A1400964700 /* Products */,
@@ -81,6 +98,11 @@
 				17BB72E317946A1500964700 /* TESTAppDelegate.h */,
 				17BB72E417946A1500964700 /* TESTAppDelegate.m */,
 				17BB72DB17946A1500964700 /* Supporting Files */,
+				17BB72F517946BED00964700 /* OpenGLView.h */,
+				17BB72F617946BED00964700 /* OpenGLView.m */,
+				17BB72F817946F6300964700 /* SimpleVertex.glsl */,
+				17BB72FA17946F9500964700 /* SimpleFragment.glsl */,
+				17BB72FC1794741200964700 /* Fragment.glsl */,
 			);
 			path = GLSLTest;
 			sourceTree = "<group>";
@@ -155,6 +177,9 @@
 				17BB72E717946A1500964700 /* Default.png in Resources */,
 				17BB72E917946A1500964700 /* Default@2x.png in Resources */,
 				17BB72EB17946A1500964700 /* Default-568h@2x.png in Resources */,
+				17BB72F917946F6300964700 /* SimpleVertex.glsl in Resources */,
+				17BB72FB17946F9500964700 /* SimpleFragment.glsl in Resources */,
+				17BB72FD1794741200964700 /* Fragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +192,7 @@
 			files = (
 				17BB72E117946A1500964700 /* main.m in Sources */,
 				17BB72E517946A1500964700 /* TESTAppDelegate.m in Sources */,
+				17BB72F717946BED00964700 /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

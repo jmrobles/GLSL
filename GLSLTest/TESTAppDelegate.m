@@ -9,13 +9,34 @@
 #import "TESTAppDelegate.h"
 
 @implementation TESTAppDelegate
+@synthesize glView=_glView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    frame.size.height /= 2;
+    self.window = [[UIWindow alloc] initWithFrame:frame];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    UIView *container = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    self.glView = [[OpenGLView alloc] initWithFrame:frame];
+   // [self.window addSubview:_glView];
+    [container addSubview:_glView];
+    
+    
+    
+    frame.origin.y = frame.size.height;
+    UITextField* text = [[UITextField alloc] initWithFrame:frame];
+    //UIView* view = [[UIView alloc] initWithFrame:frame];
+    [text setText:@"Ola k ases"];
+    [text setTextColor:[UIColor greenColor]];
+    [container addSubview:text];
+    [self.window addSubview:container];
+    
+    
     return YES;
 }
 
